@@ -1,10 +1,10 @@
-#include <windows.h>
 #include <stdio.h>
+#include <wchar.h>
 int main(void){
-    putws(L"Nothing can be done/Ничего не поделаешь");
+    fputws(L"Nothing can be done/Ничего не поделаешь\n", stdout);
     size_t u = wcslen(L"Test!");
     for (size_t i = 0; i<u;i++){
-        putws(L"Character detected");
+        fputws(L"Character detected\n", stdout);
     }
     return 0;
 }
